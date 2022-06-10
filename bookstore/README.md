@@ -1,13 +1,15 @@
-# Math-Magicians
+# Bookstore
 
-"Math Magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to Make simple calculations, read a random math-related quote.
+This Bookstore is an app that allows you to display a list of books, add a book, remove a selected book from the list. It is built with React, HTML, CSS, JavaScript.
 
 ![screenshot](./src/screen.png))
 
 ## Built With
 - React.js
+- HTML
 - CSS
 - Linters
+- JavaScript
 
 ## Live Demo
 [localhost:3000](https://localhost:3000)
@@ -30,19 +32,19 @@ To use this project run `npm start` command in terminal of your editor project w
 ## Author
 ## 👤 **Emmanuel Paul**
 
-- GitHub: [Emmanuel Paul](https://github.com/Epaltechs/Math-Magicians)
+- GitHub: [Emmanuel Paul](https://github.com/Epaltechs/Bookstore)
 - Twitter: [Emmanuel Paul](http://twitter.com/@emmapaul247)
 - LinkedIn: [Emmanuel Paul](https://www.linkedin.com/in/emmanuel-paul-a2bab7b4/)
 
 ## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/Epaltechs/To-Do-list/issues).
+Feel free to check the [issues page](https://github.com/Epaltechs/Bookstore/issues).
 
 ## Show your support
 Give a :star:️ if you like this project!
 
 ## Acknowledgments
-- Many thanks to Microverse community and all those who have contributed to my progress.
+- Many thanks to Microverse community and a hat tip to all those who have contributed to my progress.
 
 ## :memo: License
 This project is [MIT](./MIT.md) licensed.
