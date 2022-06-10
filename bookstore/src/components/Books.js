@@ -4,16 +4,16 @@ import Input from './Input';
 
 const arrayOfBooksInfo = [
   {
-    title: 'The Hunger games',
-    author: 'Suzanne Collins',
+    title: 'The African Child',
+    author: 'Camara Laye',
   },
   {
-    title: 'Dune',
-    author: 'Frank Herbert',
+    title: 'The Finished Mystery',
+    author: 'Watch Tower Society',
   },
   {
-    title: 'Capital in the twentry-first Century',
-    author: 'Suzanne Collins',
+    title: 'Eat That Frog',
+    author: 'Brian Tracey',
   },
 ];
 
