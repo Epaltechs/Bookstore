@@ -1,6 +1,6 @@
 import React from 'react';
 import Book from './Book';
-import Input from './Input';
+import Form from './Form';
 
 const arrayOfBooksInfo = [
   {
@@ -25,7 +25,7 @@ const assignmentLooper = (a) => {
 const Books = () => (
   <div>
     {arrayOfBooksInfo.map((i) => assignmentLooper(i))}
-    <Input />
+    <Form />
   </div>
 );
 
