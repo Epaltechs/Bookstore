@@ -2,7 +2,7 @@
 
 This Bookstore is an app that allows you to display a list of books, add a book, remove a selected book from the list. It is built with React, HTML, CSS, JavaScript.
 
-![screenshot](./src/screen.png))
+![screenshot](./src/screen.png)
 
 ## Built With
 - React.js
