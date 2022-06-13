@@ -7,3 +7,5 @@ const rootReducer = combineReducers({ books: reducer, categories: reducerForCate
 const store = createStore(rootReducer);
 store.dispatch(createActionForCategory());
 store.dispatch(createActionForBookToAdd());
+
+export default store;
