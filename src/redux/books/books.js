@@ -4,7 +4,7 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    id: '1', title: 'The Finished Mystery',author: 'Watchtower Society',
+    id: '1', title: 'The Finished Mystery', author: 'Watchtower Society',
   },
   {
     id: '2', title: 'Repairing Windows', author: 'Scott Muller',
