@@ -5,7 +5,8 @@ import reducer, { createActionForBookToAdd } from './books/books';
 const rootReducer = combineReducers({ books: reducer, categories: reducerForCategory });
 
 const store = createStore(rootReducer);
-store.dispatch(createActionForCategory());
-store.dispatch(createActionForBookToAdd());
+
+(createActionForCategory());
+(createActionForBookToAdd());
 
 export default store;

@@ -1,5 +1,5 @@
-const ACTIVE = 'ACTIVE';
-const NOT_ACTIVE = 'NOT_ACTIVE';
+const ACTIVE = 'redux/categories/ACTIVE';
+const NOT_ACTIVE = 'redux/categories/NOT_ACTIVE';
 
 const createActionForCategory = () => ({ type: NOT_ACTIVE });
 
