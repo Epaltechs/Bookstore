@@ -33,23 +33,7 @@ const Form = () => {
           name="title"
           placeholder="Book Title"
         />
-        <select
-          defaultValue={data.catagory}
-          onChange={selectHandleChange}
-          required
-        >
-          <option value="other" disabled hidden>
-            Select your catagory
-          </option>
-          <option value="Engineering">Engineering</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Literal">Literature</option>
-          <option value="Motivational">Motivational</option>
-          <option value="History">History</option>
-          <option value="Programming">Programming</option>
-          <option value="Drama">Drama</option>
-          <option value="Religious">Religious</option>
-        </select>
+        {selectHandleChange}
         <button type="submit" onClick={addHandler}>
           ADD BOOK
         </button>
