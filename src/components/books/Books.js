@@ -7,8 +7,8 @@ const Books = () => {
   return (
     <div className="books">
       {books.length > 0 ? (
-        books.map(({ id, title, catagory }) => (
-          <Book key={id} id={id} title={title} catagory={catagory} />
+        books.map(({ id, title }) => (
+          <Book key={id} id={id} title={title} />
         ))
       ) : (
         <h4>No books In your Library</h4>

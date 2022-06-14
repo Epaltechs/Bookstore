@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Categories = () => {
   const dispatch = useDispatch();
   const showTextUnderConstruction = () => {
-    dispatch({ type: 'ACTIVE' });
+    dispatch({ type: 'redux/categories/ACTIVE' });
   };
   return (
     <div>
