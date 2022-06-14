@@ -4,13 +4,13 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    id: '1', title: 'The Finished Mystery', catagory: 'Religious', author: 'Watchtower Society',
+    id: '1', title: 'The Finished Mystery',author: 'Watchtower Society',
   },
   {
-    id: '2', title: 'Repairing Windows', catagory: 'Engineering', author: 'Scott Muller',
+    id: '2', title: 'Repairing Windows', author: 'Scott Muller',
   },
   {
-    id: '3', title: 'The African Child', catagory: 'Literature', author: 'Camara Laye',
+    id: '3', title: 'The African Child', author: 'Camara Laye',
   },
 ];
 
