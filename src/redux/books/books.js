@@ -1,29 +1,40 @@
-const ADD_BOOK = 'redux/books/ADD_BOOK';
-const REMOVE_BOOK = 'redux/books/REMOVE_BOOK';
+// Action types
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const reducer = (initialState = [], action) => {
+const initialState = [
+  {
+    id: '1', title: 'The Finished Mystery', author: 'Watchtower Society',
+  },
+  {
+    id: '2', title: 'Repairing Windows', author: 'Scott Muller',
+  },
+  {
+    id: '3', title: 'The African Child', author: 'Camara Laye',
+  },
+];
+
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  book,
+});
+export const removeBook = (bookId) => ({
+  type: REMOVE_BOOK,
+  bookId,
+});
+
+// reducer
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...initialState, action.payload];
+      return [...state, action.book];
+
     case REMOVE_BOOK:
-      return [...initialState.filter((book) => (book.id !== action.id))];
+      return state.filter((book) => book.id !== action.bookId);
+
     default:
-      return initialState;
+      return state;
   }
 };
 
-const createActionForBookToAdd = (title, author) => ({
-  type: ADD_BOOK,
-  payload: {
-    title,
-    author,
-  },
-});
-
-const createActionForBookToRemove = (id) => ({
-  type: REMOVE_BOOK,
-  payload: id,
-});
-
-export default reducer;
-export { createActionForBookToAdd, createActionForBookToRemove };
+export default booksReducer;
