@@ -12,5 +12,5 @@ const reducerForCategory = (state = [], action) => {
   }
 };
 
-export default reducerForCategory();
+export default reducerForCategory;
 export { createActionForCategory };
