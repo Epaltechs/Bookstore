@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { v4 as epalid } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../../redux/books/books';
 
@@ -7,9 +7,10 @@ const Form = () => {
   const [data, setData] = useState({
     item_id: '',
     title: '',
+    author: '',
     category: 'other',
   });
-  const uniqueId = epalid();
+  const uniqueId = uuid();
   const changeHandler = (e) => {
     setData({ ...data, item_id: uniqueId, [e.target.name]: e.target.value });
   };
@@ -19,7 +20,7 @@ const Form = () => {
     e.preventDefault();
     if (data.title) {
       fetch(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PqQLW0Acp1ia75XdU4Nk/books',
         {
           method: 'POST',
           headers: {
@@ -41,11 +42,18 @@ const Form = () => {
       <h3>ADD NEW BOOk</h3>
       <form>
         <input
+          value={data.author}
+          onChange={changeHandler}
+          type="text"
+          name="author"
+          placeholder="Author"
+        />
+        <input
           value={data.title}
           onChange={changeHandler}
           type="text"
           name="title"
-          placeholder="Book Title"
+          placeholder="Title"
         />
         <select
           defaultValue={data.category}
@@ -53,7 +61,7 @@ const Form = () => {
           required
         >
           <option value="other" disabled hidden>
-            Select your category
+            Category
           </option>
           <option value="Engineering">Engineering</option>
           <option value="Fiction">Fiction</option>

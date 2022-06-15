@@ -1,4 +1,4 @@
-// apiKey= Khu7ayG6WPLjaXyQ6kAP
+// apiKey= PqQLW0Acp1ia75XdU4Nk
 
 // Action types
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
@@ -17,7 +17,7 @@ export const removeBook = (bookId) => ({
 });
 
 export const fetchBooks = () => (dispatch) => fetch(
-  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Khu7ayG6WPLjaXyQ6kAP/books',
+  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PqQLW0Acp1ia75XdU4Nk/books',
 )
   .then((response) => response.json())
   .then((data) => {

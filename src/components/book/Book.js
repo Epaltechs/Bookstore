@@ -7,7 +7,7 @@ const Book = ({ id, title, category }) => {
   const dispatch = useDispatch();
   const removeHandler = () => {
     fetch(
-      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Khu7ayG6WPLjaXyQ6kAP/books/${id}`,
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PqQLW0Acp1ia75XdU4Nk/books/${id}`,
       {
         method: 'DELETE',
       },
