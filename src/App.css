@@ -3,4 +3,6 @@
 .App {
   background-color: #fafafa;
   font-family: 'Kanit', sans-serif;
+  color: rgb(165, 159, 159);
+  margin: 0 50px;
 }

@@ -40,7 +40,7 @@ const Form = () => {
   };
   return (
     <div>
-      <h3>ADD NEW BOOk</h3>
+      <h3>ADD NEW BOOK</h3>
       <form>
         <TextField
           value={data.title}
@@ -58,9 +58,9 @@ const Form = () => {
           <option value="other" className="hello" disabled hidden>
             Category
           </option>
-          <option value="Engineering">Religious</option>
+          <option value="Religious">Religious</option>
           <option value="Engineering">Engineering</option>
-          <option value="Engineering">Motivational</option>
+          <option value="Motivational">Motivational</option>
           <option value="Fiction">Fiction</option>
           <option value="Literal">Literature</option>
           <option value="History">History</option>
