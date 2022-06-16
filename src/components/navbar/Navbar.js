@@ -24,7 +24,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <span className="logo material-icons">&#xE87C;</span>
+      <span className="logo">&#x1F464;</span>
     </div>
   );
 };
