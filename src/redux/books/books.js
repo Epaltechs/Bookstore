@@ -3,6 +3,7 @@
 // Action types
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const FETCH_BOOK = 'bookStore/books/FETCH_BOOK';
 
 const initialState = [];
 
@@ -41,6 +42,9 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return state.filter((book) => book.item_id !== action.bookId);
 
+    case FETCH_BOOK:
+      return Object.keys(action.payload)
+        .map((el) => ({ ...action.payload[el][0], id: el }));
     default:
       return state;
   }
