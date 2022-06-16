@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="header-container">
       <ul className="header">
-        <li className="header-item">Books Store</li>
+        <li className="header-item">Bookstore CMS</li>
         <li>
           <NavLink style={linkStyle} to="/">
             BOOKS

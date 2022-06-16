@@ -11,20 +11,23 @@ const Books = () => {
     dispatch(fetchBooks());
   }, []);
   return (
-    <div className="books">
-      {books.length > 0 ? (
-        books.map((book) => (
-          <Book
-            key={book.item_id}
-            id={book.item_id}
-            title={book.title}
-            category={book.category}
-          />
-        ))
-      ) : (
-        <h4>No books In your Library</h4>
-      )}
-    </div>
+    <>
+      <div className="books" style={{ marginBottom: '50px' }}>
+        {books.length > 0 ? (
+          books.map((book) => (
+            <Book
+              key={book.item_id}
+              id={book.item_id}
+              title={book.title}
+              category={book.category}
+            />
+          ))
+        ) : (
+          <h4>No books In your Library</h4>
+        )}
+      </div>
+      <hr />
+    </>
   );
 };
 
