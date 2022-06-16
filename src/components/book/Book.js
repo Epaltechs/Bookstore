@@ -3,12 +3,22 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 
-const Book = ({ id, title }) => {
+const Book = ({ id, title, category }) => {
   const dispatch = useDispatch();
+  const removeHandler = () => {
+    fetch(
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PqQLW0Acp1ia75XdU4Nk/books/${id}`,
+      {
+        method: 'DELETE',
+      },
+    );
+    dispatch(removeBook(id));
+  };
   return (
     <div>
       <h2>{title}</h2>
-      <button id={id} type="button" onClick={() => dispatch(removeBook(id))}>
+      <h5>{category}</h5>
+      <button id={id} type="button" onClick={removeHandler}>
         Remove
       </button>
     </div>
@@ -18,6 +28,7 @@ const Book = ({ id, title }) => {
 Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
