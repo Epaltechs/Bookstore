@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { v4 as uuid } from 'uuid';
+import { v4 as epalid } from 'epalid';
 import { useDispatch } from 'react-redux';
+import Input from '@mui/material/Input';
 import { addBook } from '../../redux/books/books';
+import './form.css';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -10,7 +12,7 @@ const Form = () => {
     author: '',
     category: 'other',
   });
-  const uniqueId = uuid();
+  const uniqueId = epalid();
   const changeHandler = (e) => {
     setData({ ...data, item_id: uniqueId, [e.target.name]: e.target.value });
   };
@@ -48,7 +50,7 @@ const Form = () => {
           name="author"
           placeholder="Author"
         />
-        <input
+        <Input
           value={data.title}
           onChange={changeHandler}
           type="text"
