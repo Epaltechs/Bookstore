@@ -6,11 +6,13 @@ const Navbar = () => {
   const linkStyle = {
     margin: '1rem',
     textDecoration: 'none',
-    color: 'rgb(78, 160, 236)',
+    color: 'rgb(85, 85, 85)',
+    fontSize: '0.9rem',
   };
   return (
-    <>
+    <div className="header-container">
       <ul className="header">
+        <li className="header-item">Bookstore CMS</li>
         <li>
           <NavLink style={linkStyle} to="/">
             BOOKS
@@ -22,8 +24,8 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <h2 className="title">Books Store</h2>
-    </>
+      <span className="logo">&#x1F464;</span>
+    </div>
   );
 };
 

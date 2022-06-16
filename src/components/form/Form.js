@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
+import TextField from '@mui/material/TextField';
 import { addBook } from '../../redux/books/books';
+import './form.css';
 
 const Form = () => {
   const [data, setData] = useState({
     item_id: '',
     title: '',
-    author: '',
     category: 'other',
   });
   const uniqueId = uuid();
@@ -20,7 +21,7 @@ const Form = () => {
     e.preventDefault();
     if (data.title) {
       fetch(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PqQLW0Acp1ia75XdU4Nk/books',
+        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
         {
           method: 'POST',
           headers: {
@@ -39,40 +40,34 @@ const Form = () => {
   };
   return (
     <div>
-      <h3>ADD NEW BOOk</h3>
+      <h3>ADD NEW BOOK</h3>
       <form>
-        <input
-          value={data.author}
-          onChange={changeHandler}
-          type="text"
-          name="author"
-          placeholder="Author"
-        />
-        <input
+        <TextField
           value={data.title}
           onChange={changeHandler}
-          type="text"
+          label="Book Title"
           name="title"
-          placeholder="Title"
+          size="small"
+          fullWidth
         />
         <select
           defaultValue={data.category}
           onChange={selectHandleChange}
           required
         >
-          <option value="other" disabled hidden>
+          <option value="other" className="hello" disabled hidden>
             Category
           </option>
+          <option value="Religious">Religious</option>
           <option value="Engineering">Engineering</option>
+          <option value="Motivational">Motivational</option>
           <option value="Fiction">Fiction</option>
           <option value="Literal">Literature</option>
-          <option value="Motivational">Motivational</option>
           <option value="History">History</option>
           <option value="Programming">Programming</option>
           <option value="Drama">Drama</option>
-          <option value="Religious">Religious</option>
         </select>
-        <button type="submit" onClick={addHandler}>
+        <button className="add-btn" type="submit" onClick={addHandler}>
           ADD BOOK
         </button>
       </form>
