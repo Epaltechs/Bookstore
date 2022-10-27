@@ -12,7 +12,7 @@ This Bookstore is an app that allows you to display a list of books, add a book,
 - JavaScript
 
 ## Live Demo
-[localhost:3000](https://localhost:3000)
+[Netlify](https://epal-bookstore.netlify.app)
 
 ## Getting Started
 To get a local copy open and running follow these simple example steps.
